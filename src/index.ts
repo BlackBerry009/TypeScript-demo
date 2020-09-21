@@ -1,16 +1,16 @@
-import { classDescriptor, propDescriptor, printObj } from "./Descriptor"
+import { Dictionary } from "./dictionary";
+const dic = new Dictionary<string,number>();
+dic.set('a', 1)
+dic.set('b', 2)
+dic.set('c', 3)
+dic.set('d', 4)
+dic.set('a', 0)
+// console.log(dic)
 
-@classDescriptor("用户")
-class User {
+// dic.forEach((k, v) => {
+//   console.log(k,v)
+// })
 
-  @propDescriptor("账户")
-  loginId: string
-
-  @propDescriptor("密码")
-  loginPwd: string
-}
-
-const u = new User();
-u.loginId = "id"
-u.loginPwd = "123456"
-printObj(u)
+// console.log(dic.delete('a'))
+console.log(dic)
+console.log(dic.size)
